@@ -19,12 +19,13 @@ app.use(
     origin: "http://localhost:3000",
     credentials: true,
   })
-);
+);   
 
 // mimic shortUrl exporting const shortUrl = router
 app.use("/api/", shortUrl); // router we created
 
 // middlewares setup ends
+
 
 app.get("/", (request, response) => {
   response.send("God is always Great");

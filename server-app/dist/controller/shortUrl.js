@@ -70,7 +70,7 @@ const deleteUrl = (request, response) => __awaiter(void 0, void 0, void 0, funct
     try {
         const shortUrl = yield shortUrl_1.default.findByIdAndDelete({ _id: request.params.id });
         if (shortUrl) {
-            response.status(204).send({ message: "Requested URL sucessfully deleted" });
+            response.status(200).send({ message: "Requested URL sucessfully deleted" });
         }
     }
     catch (error) {
